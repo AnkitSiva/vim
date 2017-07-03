@@ -7,6 +7,6 @@ Next, open Vim and run `:PlugInstall`
 
 Voila! You're ready to go
 
-
-###Notes
-You will need to install or patch your own [NerdFont] (https://github.com/ryanoasis/nerd-fonts) for the dev-icons to show up properly
+### Notes
+* You will need to install or patch your own [NerdFont] (https://github.com/ryanoasis/nerd-fonts) for the dev-icons to show up properly
+* I use the plug-in manager [Vim-Plug] (https://github.com/junegunn/vim-plug)
