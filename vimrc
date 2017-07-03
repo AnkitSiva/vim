@@ -51,6 +51,7 @@ set showmatch
 set showmode
 set spellfile=~/cloud.acm.umn.edu/vim/spell/en.utf-8.add
 set tabstop=4
+set backspace=indent,eol,start
 
 colorscheme Benokai
 
