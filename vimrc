@@ -35,17 +35,15 @@ noremap <C-I> :NERDTreeToggle<CR>
 
 let mapleader = "\<SPACE>"
 set encoding=utf8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set background=dark
 set clipboard=unnamedplus
 set foldmethod=syntax
-set foldnestmax=1
 set modeline
 set mouse=a
 set number
 set relativenumber
 set ruler
-set shiftwidth=4
+set shiftwidth=2
 set showcmd
 set showmatch
 set showmode
