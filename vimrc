@@ -25,11 +25,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:deoplete#enable_at_startup = 1
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-	\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-	\ }
 
 noremap <C-I> :NERDTreeToggle<CR>
 
