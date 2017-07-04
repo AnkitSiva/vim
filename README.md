@@ -1,6 +1,8 @@
 # Ankit's Vim Profile
 Quick shout-out to Nathaniel Ringo who goes to the U of M and helped me get on my feet with Vim!
 
+*Important*: You _must_ use Vim8 for all the features to work seamlessly. On macOS this is as easy as `brew install vim`.
+
 To get started with my Vim profile, you should probably remove your current Vim profile by running:
 `rm ~/.vim/vimrc`
 Next, open Vim and run `:PlugInstall`
