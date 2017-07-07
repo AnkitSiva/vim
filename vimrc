@@ -29,8 +29,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 noremap <C-I> :NERDTreeToggle<CR>
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 imap jk <ESC>
-nmap k gk
-nmap j gj 
 
 let mapleader = "\<SPACE>"
 set encoding=utf8
