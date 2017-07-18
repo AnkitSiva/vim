@@ -30,6 +30,7 @@ map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 imap jk <esc>
 map <Tab> :NERDTreeToggle<CR>
 map ;; :!<CR>
+map '' :wq<CR>
 
 let mapleader = "\<SPACE>"
 set encoding=utf8
