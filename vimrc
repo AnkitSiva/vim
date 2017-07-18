@@ -26,14 +26,15 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-noremap <C-I> :NERDTreeToggle<CR>
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-imap jk <ESC>
+imap jk <esc>
+map <Tab> :NERDTreeToggle<CR>
+map ;; :!<CR>
 
 let mapleader = "\<SPACE>"
 set encoding=utf8
 set background=dark
-set clipboard=unnamedplus
+set clipboard=unnamed
 set foldmethod=syntax
 set modeline
 set mouse=a
