@@ -2,7 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/repos')
 
-	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'davidbeckingsale/writegood.vim'
 	Plug 'flazz/vim-colorschemes'
 	Plug 'jamessan/vim-gnupg'
@@ -12,19 +11,17 @@ call plug#begin('~/.vim/repos')
 	Plug 'reedes/vim-wordy'
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree'
+	Plug 'raimondi/delimitmate'
 	Plug 'tpope/vim-fugitive'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'valloric/youcompleteme'
 call plug#end()
 
-
-let g:airline_powerline_fonts = 3
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 imap jk <esc>
@@ -35,8 +32,9 @@ map '' :wq<CR>
 let mapleader = "\<SPACE>"
 set encoding=utf8
 set background=dark
-set clipboard=unnamed
-set foldmethod=syntax
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
 set modeline
 set mouse=a
 set number
@@ -46,9 +44,10 @@ set showcmd
 set showmatch
 set showmode
 set spellfile=~/cloud.acm.umn.edu/vim/spell/en.utf-8.add
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set backspace=indent,eol,start
+set syntax=on
 
 colorscheme Benokai
 
