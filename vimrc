@@ -11,8 +11,8 @@ call plug#begin('~/.vim/repos')
 	Plug 'reedes/vim-wordy'
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree'
-	Plug 'raimondi/delimitmate'
 	Plug 'tpope/vim-fugitive'
+	Plug 'jiangmiao/auto-pairs'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
@@ -36,7 +36,7 @@ if $TMUX == ''
     set clipboard+=unnamed
 endif
 set modeline
-set mouse=a
+set mouse=n
 set number
 set relativenumber
 set ruler
