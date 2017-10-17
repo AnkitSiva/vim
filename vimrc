@@ -25,6 +25,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 imap jk <esc>
+imap JK <esc>
 map <Tab> :NERDTreeToggle<CR>
 map ;; :!<CR>
 map '' :wq<CR>
@@ -50,6 +51,8 @@ set backspace=indent,eol,start
 set syntax=on
 
 colorscheme Benokai
+
+let g:ycm_key_list_select_completion = ['<Down>']
 
 if executable("rg")
 	set grepprg=rg\ --vimgrep\ --no-heading
