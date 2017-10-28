@@ -1,5 +1,3 @@
-set nocompatible
-
 call plug#begin('~/.vim/repos')
 
 	Plug 'davidbeckingsale/writegood.vim'
@@ -18,6 +16,7 @@ call plug#begin('~/.vim/repos')
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'valloric/youcompleteme'
+	Plug 'jceb/vim-orgmode'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -50,9 +49,10 @@ set tabstop=4
 set backspace=indent,eol,start
 set syntax=on
 
-colorscheme Benokai
+colorscheme Tomorrow-Night
 
 let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 if executable("rg")
 	set grepprg=rg\ --vimgrep\ --no-heading
