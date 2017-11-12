@@ -2,21 +2,16 @@ call plug#begin('~/.vim/repos')
 
 	Plug 'davidbeckingsale/writegood.vim'
 	Plug 'flazz/vim-colorschemes'
-	Plug 'jamessan/vim-gnupg'
-	Plug 'metakirby5/codi.vim'
 	Plug 'mhinz/vim-startify'
 	Plug 'reedes/vim-pencil'
 	Plug 'reedes/vim-wordy'
-	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree'
-	Plug 'tpope/vim-fugitive'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'valloric/youcompleteme'
-	Plug 'jceb/vim-orgmode'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -29,6 +24,17 @@ map <Tab> :NERDTreeToggle<CR>
 map ;; :!<CR>
 map '' :wq<CR>
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i']
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+
+let g:syntastic_check_on_wq = 0
 let mapleader = "\<SPACE>"
 set encoding=utf8
 set background=dark
