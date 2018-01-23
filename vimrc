@@ -28,6 +28,7 @@ inoremap JK <esc>
 noremap <Tab> :NERDTreeToggle<CR>
 noremap ;; :!<CR>
 noremap '' :wq<CR>
+noremap ,, :set spell!<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -41,11 +42,15 @@ let g:syntastic_check_on_open = 1
 
 let g:syntastic_check_on_wq = 0
 let mapleader = "\<SPACE>"
+
 set encoding=utf8
 set background=dark
+set spelllang=en
+
 if $TMUX == ''
     set clipboard+=unnamed
 endif
+
 set modeline
 set mouse=n
 set number
@@ -54,7 +59,6 @@ set ruler
 set showcmd
 set showmatch
 set showmode
-set spellfile=~/cloud.acm.umn.edu/vim/spell/en.utf-8.add
 set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
