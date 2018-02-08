@@ -1,3 +1,4 @@
+
 " The following block of code is to auto-install the Vim-Plug plugin manager
 " when vim is opened for the first time
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -8,17 +9,11 @@ endif
 
 call plug#begin('~/.vim/repos')
 
-	Plug 'davidbeckingsale/writegood.vim'
 	Plug 'flazz/vim-colorschemes'
-	Plug 'mhinz/vim-startify'
-	Plug 'reedes/vim-pencil'
-	Plug 'reedes/vim-wordy'
 	Plug 'scrooloose/nerdtree'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
-        Plug 'lervag/vimtex'
 call plug#end() 
 
 let g:airline_powerline_fonts = 1
