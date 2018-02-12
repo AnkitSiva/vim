@@ -18,6 +18,7 @@ call plug#begin('~/.vim/repos')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
+        Plug 'sheerun/vim-polyglot'
         Plug 'lervag/vimtex'
 call plug#end() 
 
@@ -39,6 +40,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i']
+let g:polyglot_disabled = ['latex']
 
 
 set encoding=utf8
