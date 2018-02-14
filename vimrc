@@ -24,6 +24,9 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i']
+let g:polyglot_disabled = ['latex']
+let g:startify_bookmarks = ['~/.vim/vimrc', '~/.zshrc', '~/CS_3511/', '~/CS_2340/', '~/Research/']
 
 let mapleader = "\\"
 
@@ -38,11 +41,6 @@ noremap <leader>- :w<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%*
-
-let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i']
-let g:polyglot_disabled = ['latex']
-
-
 set encoding=utf8
 set background=dark
 set spelllang=en
