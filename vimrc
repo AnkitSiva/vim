@@ -16,23 +16,23 @@ call plug#begin('~/.vim/repos')
 	Plug 'scrooloose/nerdtree'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'terryma/vim-multiple-cursors'
 	Plug 'ryanoasis/vim-devicons'
-        Plug 'sheerun/vim-polyglot'
-        Plug 'lervag/vimtex'
+    Plug 'sheerun/vim-polyglot'
+"    Plug 'vim-latex/vim-latex'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-fugitive'
 call plug#end() 
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i']
-let g:polyglot_disabled = ['latex']
-let g:startify_bookmarks = ['~/.vim/vimrc', '~/.zshrc', '~/CS_3511/', '~/CS_2340/', '~/Research/']
-
-let mapleader = "\\"
+let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i', '\.class']
+"let g:polyglot_disabled = ['latex']
+let g:startify_bookmarks = [{'a':'~/.vim/vimrc'}, {'s':'~/.zshrc'}, {'d':'~/CS_4540/'}, {'f':'~/CS_4510/'}, {'g':'~/Research/'}, {'h':'~/Research/'}]
+let g:Tex_ViewRule_pdf = '/Applications/Preview.app'
 
 noremap <F2> :echo 'Current time is ' . strftime('%c')<CR>
-inoremap jk <esc>
-inoremap JK <esc>
+inoremap jj <esc>
+inoremap JJ <esc>
 noremap <Tab> :NERDTreeToggle<CR>
 noremap ;; :!<CR>
 noremap '' :wq<CR>
@@ -56,11 +56,16 @@ set relativenumber
 set ruler
 set showcmd
 set showmatch
+set matchtime=0
 set showmode
 set shiftwidth=4
 set expandtab
+set tabstop=4
 set backspace=indent,eol,start
+set path+=**
+set wildmenu
 syntax on
+filetype plugin indent on
 
 colorscheme Tomorrow-Night
 
@@ -68,3 +73,10 @@ if executable("rg")
 	set grepprg=rg\ --vimgrep\ --no-heading
 	set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
+
+if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+endif
+
+" To close vim when nerdTree is the only window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
