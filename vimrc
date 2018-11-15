@@ -18,13 +18,14 @@ call plug#begin('~/.vim/repos')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'ryanoasis/vim-devicons'
     Plug 'sheerun/vim-polyglot'
-"    Plug 'vim-latex/vim-latex'
+"   Plug 'vim-latex/vim-latex'
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-fugitive'
 call plug#end() 
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'luna'
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i', '\.class']
 "let g:polyglot_disabled = ['latex']
 let g:startify_bookmarks = [{'a':'~/.vim/vimrc'}, {'s':'~/.zshrc'}, {'d':'~/CS_4540/'}, {'f':'~/CS_4510/'}, {'g':'~/Research/'}, {'h':'~/Research/'}]
