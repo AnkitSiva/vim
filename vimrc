@@ -25,7 +25,7 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'luna'
+"let g:airline_theme = 'luna'
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i', '\.class']
 "let g:polyglot_disabled = ['latex']
 let g:startify_bookmarks = [{'a':'~/.vim/vimrc'}, {'s':'~/.zshrc'}, {'d':'~/CS_4540/'}, {'f':'~/CS_4510/'}, {'g':'~/Research/'}, {'h':'~/Research/'}]
@@ -68,6 +68,7 @@ set wildmenu
 syntax on
 filetype plugin indent on
 
+set t_Co=256
 colorscheme Tomorrow-Night
 
 if executable("rg")
