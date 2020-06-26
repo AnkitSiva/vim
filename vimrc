@@ -26,7 +26,7 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_theme = 'luna'
-let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i', '\.class']
+let NERDTreeIgnore = ['\.pyc$', '\.o', '\.i', '\.class', '\.gch']
 "let g:polyglot_disabled = ['latex']
 let g:startify_bookmarks = [{'a':'~/.vim/vimrc'}, {'s':'~/.zshrc'}, {'d':'~/CS_4540/'}, {'f':'~/CS_4510/'}, {'g':'~/Research/'}, {'h':'~/Research/'}]
 let g:Tex_ViewRule_pdf = '/Applications/Preview.app'
@@ -65,6 +65,7 @@ set tabstop=4
 set backspace=indent,eol,start
 set path+=**
 set wildmenu
+set tags=tags;/
 syntax on
 filetype plugin indent on
 
